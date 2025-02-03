@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Search, SortAsc, SortDesc, Download, CheckSquare, XSquare } from "lucide-react";
 
@@ -16,7 +16,7 @@ const fetchPets = async (): Promise<Pet[]> => {
     throw new Error("Failed to fetch pets");
   }
   const data = await response.json();
-  return data.map((pet: any) => ({
+  return data.map((pet:any) => ({
     id: pet.title,
     title: pet.title,
     description: pet.description,
