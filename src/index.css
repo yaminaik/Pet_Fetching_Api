@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom font family */
+  --font-sans:  'Arial', sans-serif;
+  --font-serif: 'Times New Roman', serif;
+  
+  /* Custom font sizes */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.5rem; /* 24px */
+  --font-size-xxl: 2rem; /* 32px */
+
+  /* Custom colors */
+  --color-lighest: #F9DBBD; /* Vibrant pink */
+  --color-light: #FFA5AB; /* Bright pink */
+  --color-primary: #DA627D; /* Bright pin*/
+  --color-dark: #A53860; /* Deep maroon */
+  --color-darkest: #450920; /* Deep maroon */
+
+  --gradient-bg: linear-gradient(135deg, var(--color-dark), var(--color-primary), var(--color-light));
+}
+@layer base {
+  /* Apply the custom fonts globally */
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    background: var(--gradient-bg);
+    background-attachment: fixed;
+    background-size: cover;
+
+  }
+
+  /* Set up custom font sizes globally */
+  h1 {
+    font-size: var(--font-size-xxl);
+    color: var(--color-white);
+  }
+  h2 {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+  }
+
+  p {
+    font-size: var(--font-size-lg);
+    color: var(--color-white);
+  }
+  
+  ul{
+    font-size: var(--font-size-lg);
+    color: var(--color-white);
+  }
+}
+
+@layer components {
+  /* Example of a custom component style */
+  .button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: bold;
+  }
+  
+  .button:hover {
+    background-color: var(--color-dark);
+  }
+}
+
+@layer utilities {
+  /* Example of a custom utility for spacing */
+  .m-auto {
+    margin: auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+}
